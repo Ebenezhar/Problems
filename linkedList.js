@@ -1,56 +1,9 @@
-
-// class Node {
-//     constructor(e) {
-//         this.data = e;
-//         this.next = null;
-//     }
-// }
-// class LinkedList {
-//     constructor() {
-//         this.head = null;
-//         this.size = 0;
-//     }
-
-//     add(e) {
-//         var node = new Node(e);
-//         var current;
-//         if (this.head == null) {
-//             this.head = node;
-//         } else {
-//             current = this.head;
-//             while (current.next != null) {
-//                 current = current.next;
-//             }
-//             current.next = node;
-//         }
-//         this.size++;
-//     }
-//     printList() {
-//         var current = this.head;
-//         var str = '';
-//         while (current) {
-//             str += current.data + " --> "
-//             current = current.next;
-//         }
-//         console.log(str);
-//     }
-// }
-
-// var ll = new LinkedList();
-
-// ll.add(10);
-// ll.add(20);
-// ll.printList();
-
-
-
 class Node {
     constructor(e) {
         this.data = e;
         this.next = null;
     }
 }
-
 class LinkedList {
     constructor() {
         this.head = null;
@@ -145,7 +98,8 @@ class LinkedList {
             str += current.data + " --> "
             current = current.next;
         }
-        console.log(str);
+        // console.log(str);
+        return str;
     }
 }
 
@@ -158,11 +112,12 @@ ll.addAtEnd(40);
 ll.addAtEnd(50);
 ll.addAtEnd(60);
 ll.addInBtw(0, 100);
-ll.printList();
+let a = ll.printList();
 ll.deleteInBtw(3);
+console.log(a);
+
 
 // ll.deleteAtBegining();
-// ll.addAtBegining(5); 
+// ll.addAtBegining(5);
 // ll.deleteAtEnd();
 
-ll.printList();
